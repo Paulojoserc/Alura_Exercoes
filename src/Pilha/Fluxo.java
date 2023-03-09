@@ -3,12 +3,21 @@ package Pilha;
 public class Fluxo {
 	public static void main(String[] args) {
 		System.out.println("Ini do main");
-		//try{
+		try{
 			metodo1();
-		/*}catch(ArithmeticException ex) {
-			System.out.println("ArithmeticException");
-		}*/
-		System.out.println("Fim do main");
+		}catch(ArithmeticException | NullPointerException ex) {
+			//getMessage trais qual é erro 
+			String msg = ex.getMessage();
+			System.out.println("Exception "+ msg);
+			
+			//trais a pilha por onde o metado passou
+			ex.printStackTrace();
+		}/*catch(NullPointerException ex) {
+			//getMessage trais qual é erro 
+			String msg = ex.getMessage();
+			System.out.println("NullPointerException"+ msg);
+		}
+		*/System.out.println("Fim do main");
 	}
 
 	private static void metodo1() {
@@ -27,6 +36,9 @@ public class Fluxo {
 			System.out.println(i);
 		//	try {
 				int a= i /0;
+				//Conta c = null;
+				//c.deposita();
+				
 			/*}catch(ArithmeticException ex) {
 				System.out.println("ArithmeticException");
 			}*/
