@@ -1,4 +1,4 @@
-package Pilha;
+package pilha;
 
 public class FluxoComTratamento {
 	public static void main(String[] args) {
@@ -35,6 +35,7 @@ public class FluxoComTratamento {
 		for (int i = 1; i <= 5; i++) {
 			System.out.println(i);
 		//	try {
+				@SuppressWarnings("unused")
 				int a= i /0;
 				//Conta c = null;
 				//c.deposita();
