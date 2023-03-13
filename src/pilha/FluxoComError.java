@@ -25,7 +25,7 @@ public class FluxoComError {
 
 	private static void metodo2() {
 		System.out.println("Ini do metodo2");
-
+		
 		metodo2();
 
 		System.out.println("Fim do metodo2");
